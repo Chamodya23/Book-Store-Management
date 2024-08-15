@@ -21,8 +21,9 @@ public class Book {
     private double price; // Changed to double for better monetary value representation
     private String publishedDate; // Changed to String for date representation
 
-    @Column(name = "author_id")
-    private int authorId; // Foreign Key referring to Author entity
+    @ManyToOne
+    @JoinColumn(name = "author_id", referencedColumnName = "author_ID")
+    private Author author; // Foreign Key referring to Author entity
 
     @Column(name = "publisher_id")
     private int publisherId; // Foreign Key referring to Publisher entity

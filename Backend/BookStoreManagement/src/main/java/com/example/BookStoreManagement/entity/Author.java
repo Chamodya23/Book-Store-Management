@@ -5,21 +5,26 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "Orders")
+@Table(name = "Author")
 
-public class Order {
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int OrderId;
-    private String OrderName;
-    private int TotalAmount;
+    private int author_ID;
 
-    @OneToMany(mappedBy = "order")
-    private List<Order_Item> orderItems;
+    private String author_Name;
+    private String biography;
+
+    //One author can write many books
+
+    @OneToMany(mappedBy = "author")
+   private List<Book> books;  // Ensure you have a Book entity
+
 }
