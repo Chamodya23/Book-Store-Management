@@ -8,7 +8,7 @@
 		<version>3.3.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.example</groupId>git add
 	<artifactId>BookStoreManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BookStoreManagement</name>
@@ -59,8 +59,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -69,5 +73,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
