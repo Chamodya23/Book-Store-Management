@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Table(name = "Author")
+
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +24,5 @@ public class Author {
 
     //One author can write many books
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
-   private List<Book> books;  // Ensure you have a Book entity
+    private List<Book> books;  // Ensure you have a Book entity
 }

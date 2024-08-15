@@ -5,11 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "Order")
+@Table(name = "Orders")
 
 public class Order {
     @Id
@@ -17,4 +19,7 @@ public class Order {
     private int OrderId;
     private String OrderName;
     private int TotalAmount;
+
+    @OneToMany(mappedBy = "order")
+    private List<Order_Item> orderItems;
 }
