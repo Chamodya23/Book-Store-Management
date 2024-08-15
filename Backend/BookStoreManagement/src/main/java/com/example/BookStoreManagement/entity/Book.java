@@ -22,8 +22,8 @@ public class Book {
     @Column(name = "author_id")
     private int authorId; // Foreign Key referring to Author entity
 
-    @Column(name = "publisher_id")
-    private int publisherId; // Foreign Key referring to Publisher entity
+    @Column(name = "pub_Id")
+    private int pub_Id; // Foreign Key referring to Publisher entity
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "categoryID")

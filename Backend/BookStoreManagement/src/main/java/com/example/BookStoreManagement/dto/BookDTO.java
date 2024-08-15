@@ -15,6 +15,6 @@ public class BookDTO {
     private double price; // Price of the book
     private String publishedDate; // Published date of the book
     private int authorId; // Foreign Key referring to the Author entity
-    private int publisherId; // Foreign Key referring to the Publisher entity
+    private int pub_Id; // Foreign Key referring to the Publisher entity
     private int categoryId; // Foreign Key referring to the Category entity
 }

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 
 public class PublisherDTO {
-    private int pub_Id;
-    private String pub_Name;
-    private String pub_Address;
+    private int pub_Id;//primary key
+    private String pub_Name;//Publisher's Name
+    private String pub_Address;//publisher's Address
 }

@@ -17,11 +17,11 @@ import java.util.List;
 public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int pub_Id;
-    private String pub_Name;
-    private String pub_Address;
+    private int pub_Id;//primary key
+    private String pub_Name;//name of publisher
+    private String pub_Address;//publisher's address
 
-    //One author can write many books
+    //One publisher can write many books
     @OneToMany(mappedBy = "publisher")
     private List<Book> books;  // Ensure you have a Book entity
 }
