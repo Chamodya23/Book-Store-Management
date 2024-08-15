@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -23,6 +23,8 @@ public class Author {
     private String biography;
 
     //One author can write many books
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
-     private List<Book> books;  // Ensure you have a Book entity
+
+    @OneToMany(mappedBy = "author")
+   private List<Book> books;  // Ensure you have a Book entity
+
 }
