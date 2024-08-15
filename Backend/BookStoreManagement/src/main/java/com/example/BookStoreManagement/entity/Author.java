@@ -24,5 +24,5 @@ public class Author {
 
     //One author can write many books
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
-    private List<Book> books;  // Ensure you have a Book entity
+     private List<Book> books;  // Ensure you have a Book entity
 }
