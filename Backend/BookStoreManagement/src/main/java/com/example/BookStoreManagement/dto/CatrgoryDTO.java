@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 
 public class CatrgoryDTO {
-    private int categoryID;
+    private int categoryId; // Primary Key of the Category Entity
+    // Category Entity has OneToMany Relationship with Book Entity
     private String categoryname;
 
 
