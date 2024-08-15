@@ -5,21 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "Category")
+@Table(name = "Order")
 
-public class Category {
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int categoryId; // category_id from the category table
-    private String categoryName; //category_name from the category table
-
-    @OneToMany(mappedBy = "category")
-    private List<Book> books;
-
+    private int OrderId;
+    private String OrderName;
+    private int TotalAmount;
 }
