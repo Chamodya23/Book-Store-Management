@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,4 +20,10 @@ public class Publisher {
     private int pub_Id;
     private String pub_Name;
     private String pub_Address;
+
+    //One author can write many books
+    @OneToMany(mappedBy = "publisher")
+    private List<Book> books;  // Ensure you have a Book entity
 }
+
+

@@ -19,15 +19,17 @@ public class Book {
     private double price; // Changed to double for better monetary value representation
     private String publishedDate; // Changed to String for date representation
 
-    @Column(name = "author_id")
-    private int authorId; // Foreign Key referring to Author entity
-
-    @Column(name = "publisher_id")
-    private int publisherId; // Foreign Key referring to Publisher entity
+    @ManyToOne
+    @JoinColumn(name = "pub_Id", referencedColumnName = "pub_Id")
+    private Publisher publisher; // Foreign Key referring to Publisher entity
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "categoryID")
     private Category category;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id", referencedColumnName = "author_id")
+    private Author author;
 
 }
 
