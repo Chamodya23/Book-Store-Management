@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Table(name = "Author")
+
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +23,8 @@ public class Author {
     private String biography;
 
     //One author can write many books
+
     @OneToMany(mappedBy = "author")
    private List<Book> books;  // Ensure you have a Book entity
+
 }
