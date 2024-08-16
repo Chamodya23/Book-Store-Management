@@ -8,7 +8,7 @@
 		<version>3.3.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>git add
+	<groupId>com.example</groupId>
 	<artifactId>BookStoreManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BookStoreManagement</name>
@@ -62,7 +62,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
+			<scope>true</scope>
 		</dependency>
 	</dependencies>
 	<build>
