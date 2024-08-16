@@ -18,4 +18,11 @@ public class Order_Item {
     private int quantity;
     private float price;
 
+    @ManyToOne
+    @JoinColumn(name = "order_id", referencedColumnName = "orderId")
+    private Order order;
+
+    @ManyToOne
+    @JoinColumn(name = "book_id", referencedColumnName = "bookId")
+    private Book book;
 }
