@@ -1,0 +1,392 @@
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/BookDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/BookDTO.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/BookDTO.java
+new file mode 100644
+--- /dev/null	(date 1723971476161)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/BookDTO.java	(date 1723971476161)
+@@ -0,0 +1,20 @@
++package com.example.BookStoreManagement.dto;
++
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@AllArgsConstructor
++@Data
++@NoArgsConstructor
++
++public class BookDTO {
++    private int book_Id; // Primary Key for Book entity
++    private String title;
++    private String isbn;
++    private double price; // Price of the book
++    private String publishedDate; // Published date of the book
++    private int authorId; // Foreign Key referring to the Author entity
++    private int publisherId; // Foreign Key referring to the Publisher entity
++    private int categoryId; // Foreign Key referring to the Category entity
++}
+\ No newline at end of file
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/Order_ItemDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/Order_ItemDTO.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/Order_ItemDTO.java
+new file mode 100644
+--- /dev/null	(date 1723971476162)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/Order_ItemDTO.java	(date 1723971476162)
+@@ -0,0 +1,15 @@
++package com.example.BookStoreManagement.dto;
++
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++
++public class Order_ItemDTO {
++    private int orderItemId;
++    private int quantity;
++    private float price;
++}
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/AuthorDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/AuthorDTO.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/AuthorDTO.java
+new file mode 100644
+--- /dev/null	(date 1723971476161)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/AuthorDTO.java	(date 1723971476161)
+@@ -0,0 +1,22 @@
++package com.example.BookStoreManagement.dto;
++
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++public class AuthorDTO {
++    public static int author_ID;
++    private String author_Name;
++    private String biography;
++
++    public static Integer getauthor_ID() {
++        return author_ID;
++    }
++
++    public static Integer author_ID() {
++        return author_ID;
++    }
++}
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/OrderDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/OrderDto.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/OrderDto.java
+new file mode 100644
+--- /dev/null	(date 1723971476162)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/OrderDto.java	(date 1723971476162)
+@@ -0,0 +1,16 @@
++package com.example.BookStoreManagement.dto;
++
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++
++public class OrderDto {
++    private int OrderId;
++    private String OrderName;
++    private int TotalAmount;
++
++}
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/CatrgoryDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/CatrgoryDTO.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/CatrgoryDTO.java
+new file mode 100644
+--- /dev/null	(date 1723971476161)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/CatrgoryDTO.java	(date 1723971476161)
+@@ -0,0 +1,17 @@
++package com.example.BookStoreManagement.dto;
++
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++
++public class CatrgoryDTO {
++    private int categoryId; // Primary Key of the Category Entity
++    // Category Entity has OneToMany Relationship with Book Entity
++    private String categoryname;
++
++
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"0fd705f0-36d6-4304-bc69-afcbcb599b42\" name=\"Changes\" comment=\"Changed\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"YashodDev\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;Savindu12&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/Chamodya23/Book-Store-Management.git&quot;,\n    &quot;accountId&quot;: &quot;d138b4ee-4e4c-4c15-89a3-551e356e2221&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 8\n}</component>\n  <component name=\"ProjectId\" id=\"2kmR5O4tcPVjR1pRRw9xRm9kk5E\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"KaveeshaDev\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/Users/savindudhamsara/Documents/Campus Github Project/Book-Store-Management\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/CategoryService\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62\" />\n        <option value=\"bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"0fd705f0-36d6-4304-bc69-afcbcb599b42\" name=\"Changes\" comment=\"\" />\n      <created>1723886581267</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1723886581267</updated>\n      <workItem from=\"1723886582310\" duration=\"2560000\" />\n      <workItem from=\"1723958347945\" duration=\"33000\" />\n      <workItem from=\"1723958668144\" duration=\"852000\" />\n      <workItem from=\"1723959523285\" duration=\"975000\" />\n      <workItem from=\"1723971314030\" duration=\"132000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Changed\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1723958858930</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1723958858930</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Changed\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1723971037186</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1723971037186</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Changed\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1723971107084</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1723971107084</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Changed\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1723971120243</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1723971120243</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Changed\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1723971322205</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1723971322205</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"6\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"pushed\" />\n    <MESSAGE value=\"Changed\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changed\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a5431a920010d904f8d76a81e3edc20876fc0dcc)
++++ b/.idea/workspace.xml	(date 1723971545044)
+@@ -4,7 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0fd705f0-36d6-4304-bc69-afcbcb599b42" name="Changes" comment="Changed" />
++    <list default="true" id="0fd705f0-36d6-4304-bc69-afcbcb599b42" name="Changes" comment="Changed">
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/controller/test.txt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/AuthorDTO.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/BookDTO.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/CatrgoryDTO.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/OrderDto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/dto/Order_ItemDTO.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Author.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Book.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Category.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order_Item.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/repo/test.txt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/service/test.txt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/util/test.txt" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -45,7 +60,6 @@
+   "keyToString": {
+     "ASKED_ADD_EXTERNAL_FILES": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "KaveeshaDev",
+     "kotlin-language-version-configured": "true",
+     "last_opened_file_path": "/Users/savindudhamsara/Documents/Campus Github Project/Book-Store-Management",
+     "node.js.detected.package.eslint": "true",
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order.java
+new file mode 100644
+--- /dev/null	(date 1723971476162)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order.java	(date 1723971476162)
+@@ -0,0 +1,29 @@
++package com.example.BookStoreManagement.entity;
++
++import jakarta.persistence.*;
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++import java.util.List;
++
++@Entity
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++<<<<<<< HEAD
++@Table(name = "Orders ")
++=======
++@Table(name = "Orders")
++>>>>>>> 98ca2fb8bad4f47d9012acbd040cea259df72936
++
++public class Order {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int OrderId;
++    private String OrderName;
++    private int TotalAmount;
++
++    @OneToMany(mappedBy = "order")
++    private List<Order_Item> orderItems;
++}
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Category.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Category.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Category.java
+new file mode 100644
+--- /dev/null	(date 1723971476162)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Category.java	(date 1723971476162)
+@@ -0,0 +1,25 @@
++package com.example.BookStoreManagement.entity;
++
++import jakarta.persistence.*;
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++import java.util.List;
++
++@Entity
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++@Table(name = "Category")
++
++public class Category {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int categoryId; // category_id from the category table
++    private String categoryName; //category_name from the category table
++
++    @OneToMany(mappedBy = "category")
++    private List<Book> books;
++
++}
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order_Item.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order_Item.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order_Item.java
+new file mode 100644
+--- /dev/null	(date 1723971476162)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Order_Item.java	(date 1723971476162)
+@@ -0,0 +1,28 @@
++package com.example.BookStoreManagement.entity;
++
++import jakarta.persistence.*;
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@Entity
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++@Table(name = "Order_Item")
++
++public class Order_Item {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int orderItemId;
++    private int quantity;
++    private float price;
++
++    @ManyToOne
++    @JoinColumn(name = "order_id", referencedColumnName = "orderId")
++    private Order order;
++
++    @ManyToOne
++    @JoinColumn(name = "book_id", referencedColumnName = "bookId")
++    private Book book;
++}
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Author.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Author.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Author.java
+new file mode 100644
+--- /dev/null	(date 1723971476162)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Author.java	(date 1723971476162)
+@@ -0,0 +1,30 @@
++package com.example.BookStoreManagement.entity;
++
++import jakarta.persistence.*;
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++
++import java.util.List;
++
++@Entity
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++@Table(name = "Author")
++
++public class Author {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int author_ID;
++
++    private String author_Name;
++    private String biography;
++
++    //One author can write many books
++
++    @OneToMany(mappedBy = "author")
++   private List<Book> books;  // Ensure you have a Book entity
++
++}
+Index: Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Book.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Book.java b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Book.java
+new file mode 100644
+--- /dev/null	(date 1723971476162)
++++ b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/entity/Book.java	(date 1723971476162)
+@@ -0,0 +1,39 @@
++package com.example.BookStoreManagement.entity;
++
++import jakarta.persistence.*;
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++import java.util.List;
++
++@Entity
++@AllArgsConstructor
++@NoArgsConstructor
++@Data
++@Table(name = "Book")
++public class Book {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int bookId; // book_id in the database
++    private String title;
++    private String isbn;
++    private double price; // Changed to double for better monetary value representation
++    private String publishedDate; // Changed to String for date representation
++
++    @ManyToOne
++    @JoinColumn(name = "author_id", referencedColumnName = "author_ID")
++    private Author author; // Foreign Key referring to Author entity
++
++    @Column(name = "publisher_id")
++    private int publisherId; // Foreign Key referring to Publisher entity
++
++    @ManyToOne
++    @JoinColumn(name = "category_id", referencedColumnName = "categoryID")
++    private Category category;
++
++    @OneToMany(mappedBy = "book")
++    private List<Order_Item> orderItems;
++
++}
++
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/repo/test.txt b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/repo/test.txt
+new file mode 100644
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/util/test.txt b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/util/test.txt
+new file mode 100644
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/service/test.txt b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/service/test.txt
+new file mode 100644
+diff --git a/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/controller/test.txt b/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/bookservice/controller/test.txt
+new file mode 100644
