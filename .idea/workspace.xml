@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
 
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +19,30 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
 
+        <entry key="$PROJECT_DIR$" value="IsuruDev" />
+
+
         <entry key="$PROJECT_DIR$" value="main" />
+
 
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Savindu12&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Chamodya23/Book-Store-Management.git&quot;,
+    &quot;accountId&quot;: &quot;d138b4ee-4e4c-4c15-89a3-551e356e2221&quot;
+  }
+}</component>
+
 
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
@@ -37,6 +56,7 @@
     "accountId": "d138b4ee-4e4c-4c15-89a3-551e356e2221"
   }
 }]]></component>
+
 
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -54,7 +74,11 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
 
+    "git-widget-placeholder": "#29 on YashodDev",
+
+
     "git-widget-placeholder": "ChamodyaDev",
+
 
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/savindudhamsara/Documents/Campus Github Project/Book-Store-Management",
@@ -72,6 +96,7 @@
     </key>
   </component>
 
+
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Book-Store-Management" />
@@ -88,6 +113,7 @@
     </configuration>
   </component>
 
+
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -100,7 +126,10 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
 
+      <changelist id="0fd705f0-36d6-4304-bc69-afcbcb599b42" name="Changes" comment="" />
+
       <changelist id="13885443-c91b-4efa-a04d-e844a12ff959" name="Changes" comment="pushed" />
+
 
       <created>1723886581267</created>
       <option name="number" value="Default" />
@@ -108,6 +137,43 @@
       <updated>1723886581267</updated>
       <workItem from="1723886582310" duration="2560000" />
       <workItem from="1723958347945" duration="33000" />
+
+      <workItem from="1723958668144" duration="852000" />
+      <workItem from="1723959523285" duration="975000" />
+    </task>
+    <task id="LOCAL-00001" summary="Changed">
+      <option name="closed" value="true" />
+      <created>1723958858930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723958858930</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed">
+      <option name="closed" value="true" />
+      <created>1723971037186</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723971037186</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed">
+      <option name="closed" value="true" />
+      <created>1723971107084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723971107084</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changed">
+      <option name="closed" value="true" />
+      <created>1723971120243</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723971120243</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
 
     </task>
 
@@ -118,6 +184,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+
+    <MESSAGE value="pushed" />
+    <MESSAGE value="Changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed" />
+
+
 
 
   </component>
