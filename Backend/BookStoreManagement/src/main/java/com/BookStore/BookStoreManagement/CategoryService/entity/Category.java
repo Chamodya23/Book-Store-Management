@@ -1,4 +1,4 @@
-package com.example.BookStoreManagement.entity;
+package com.BookStore.BookStoreManagement.CategoryService.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -15,11 +15,11 @@ import java.util.List;
 
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int categoryId; // category_id from the category table
     private String categoryName; //category_name from the category table
 
-    @OneToMany(mappedBy = "category")
-    private List<Book> books;
+//    @OneToMany(mappedBy = "category")
+//    private List<Book> books;
 
 }
