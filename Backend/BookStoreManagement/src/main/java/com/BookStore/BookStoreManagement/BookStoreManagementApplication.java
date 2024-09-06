@@ -9,14 +9,11 @@ import org.springframework.context.annotation.Bean;
 public class BookStoreManagementApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(BookStoreManagementApplication.class, args);
+	 SpringApplication.run(BookStoreManagementApplication.class, args);
 	}
 
 	@Bean
 	public ModelMapper modelMapper(){
 		return new ModelMapper();
 	}
-
-
 }
