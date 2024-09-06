@@ -1,4 +1,4 @@
-package com.example.BookStoreManagement.entity;
+package com.BookStore.BookStoreManagement.orderservice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "Order")
+@Table(name = "OrderTBL")
 
 public class Order {
     @Id
@@ -17,4 +17,7 @@ public class Order {
     private int OrderId;
     private String OrderName;
     private int TotalAmount;
+
+    // Getters and setters
 }
+
