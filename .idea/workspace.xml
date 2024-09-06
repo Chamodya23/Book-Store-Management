@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fd705f0-36d6-4304-bc69-afcbcb599b42" name="Changes" comment="Changed" />
+
+    <list default="true" id="0fd705f0-36d6-4304-bc69-afcbcb599b42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,11 +18,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+
         <entry key="$PROJECT_DIR$" value="IsuruDev" />
+
+
+        <entry key="$PROJECT_DIR$" value="main" />
+
+
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
@@ -30,6 +42,22 @@
     &quot;accountId&quot;: &quot;d138b4ee-4e4c-4c15-89a3-551e356e2221&quot;
   }
 }</component>
+
+
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Savindu12"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Chamodya23/Book-Store-Management.git",
+    "accountId": "d138b4ee-4e4c-4c15-89a3-551e356e2221"
+  }
+}]]></component>
+
+
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -45,7 +73,13 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+
     "git-widget-placeholder": "#29 on YashodDev",
+
+
+    "git-widget-placeholder": "ChamodyaDev",
+
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/savindudhamsara/Documents/Campus Github Project/Book-Store-Management",
     "node.js.detected.package.eslint": "true",
@@ -61,6 +95,25 @@
       <recent name="$PROJECT_DIR$/Backend/BookStoreManagement/src/main/java/com/example/BookStoreManagement/CategoryService" />
     </key>
   </component>
+
+
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Book-Store-Management" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Book-Store-Management" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+
+
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,13 +125,19 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+
       <changelist id="0fd705f0-36d6-4304-bc69-afcbcb599b42" name="Changes" comment="" />
+
+      <changelist id="13885443-c91b-4efa-a04d-e844a12ff959" name="Changes" comment="pushed" />
+
+
       <created>1723886581267</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723886581267</updated>
       <workItem from="1723886582310" duration="2560000" />
       <workItem from="1723958347945" duration="33000" />
+
       <workItem from="1723958668144" duration="852000" />
       <workItem from="1723959523285" duration="975000" />
     </task>
@@ -115,6 +174,9 @@
       <updated>1723971120243</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+
+    </task>
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,8 +184,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+
     <MESSAGE value="pushed" />
     <MESSAGE value="Changed" />
     <option name="LAST_COMMIT_MESSAGE" value="Changed" />
+
+
+
+
   </component>
 </project>
